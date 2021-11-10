@@ -6,6 +6,10 @@ app.get('/', (req, res) => {
   res.json({data:"hello world"})
 })
 
+app.post('/posthere', (req, res) => {
+    res.json({message:"You posted this", body:req.body})
+})
+
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })
